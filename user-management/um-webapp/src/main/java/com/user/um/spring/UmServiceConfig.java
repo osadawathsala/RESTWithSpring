@@ -1,10 +1,10 @@
-package com.baeldung.um.spring;
+package com.user.um.spring;
 
 import org.springframework.context.annotation.ComponentScan;
 import org.springframework.context.annotation.Configuration;
 
 @Configuration
-@ComponentScan({ "com.baeldung.um.service" })
+@ComponentScan({ "com.user.um.service" })
 public class UmServiceConfig {
 
     public UmServiceConfig() {

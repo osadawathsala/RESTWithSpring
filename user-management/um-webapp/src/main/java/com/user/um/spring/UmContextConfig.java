@@ -1,4 +1,4 @@
-package com.baeldung.um.spring;
+package com.user.um.spring;
 
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;

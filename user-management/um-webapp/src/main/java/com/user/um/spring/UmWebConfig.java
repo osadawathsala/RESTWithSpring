@@ -1,4 +1,4 @@
-package com.baeldung.um.spring;
+package com.user.um.spring;
 
 import java.util.List;
 import java.util.Optional;
@@ -16,7 +16,7 @@ import com.fasterxml.jackson.databind.DeserializationFeature;
 import com.fasterxml.jackson.databind.SerializationFeature;
 
 @Configuration
-@ComponentScan({ "com.baeldung.um.web", "com.baeldung.common.web" })
+@ComponentScan({ "com.user.um.web", "com.user.common.web" })
 @EnableWebMvc
 public class UmWebConfig implements WebMvcConfigurer {
 
@@ -37,7 +37,7 @@ public class UmWebConfig implements WebMvcConfigurer {
     }
 
     @Bean
-    public javax.validation.Validator localValidatorFactoryBean() {
+    public jakarta.validation.Validator localValidatorFactoryBean() {
         return new LocalValidatorFactoryBean();
     }
 }
