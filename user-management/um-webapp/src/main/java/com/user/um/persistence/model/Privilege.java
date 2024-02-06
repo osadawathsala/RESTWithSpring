@@ -8,8 +8,9 @@ import com.user.common.interfaces.INameableDto;
 import com.user.common.persistence.model.INameableEntity;
 import com.fasterxml.jackson.annotation.JsonIgnore;
 import jakarta.persistence.*;
+import jakarta.validation.constraints.NotNull;
 import jakarta.validation.constraints.Size;
-import org.antlr.v4.runtime.misc.NotNull;
+
 
 @Entity
 public class Privilege implements INameableEntity, INameableDto {
@@ -21,7 +22,7 @@ public class Privilege implements INameableEntity, INameableDto {
 
     @Column(unique = true, nullable = false)
     @Size(min = 2, max = 30)
-    @NotNull
+    @NotNull(message = "Name can not be null")
     private String name;
 
     @Column(unique = false, nullable = false)
